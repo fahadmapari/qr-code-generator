@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #9c88ff;
+}
+
+.website-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem;
+}
+
+.brand-name {
+  font-family: "Courgette", cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.7rem 0;
+  color: #f5f6fa;
+}
+
+.canvas-container {
+  width: 30rem;
+  height: 30rem;
+  margin: 0.7rem 0;
+  border-radius: 15px;
+  background-color: #f5f6fa;
+  position: relative;
+}
+
+.canvas-container h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 0.2;
+}
+
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95% !important;
+  height: 95% !important;
+}
+
+#qr-input {
+  display: block;
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0.4rem 0;
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border: none;
+}
+
+#qr-input::placeholder {
+  opacity: 0.15;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  background: #32ff7e;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #3d3d3d;
+  flex: 1;
+}
+
+.btn:nth-of-type(2) {
+  background-color: #18dcff;
+}
+
+.message {
+  transform: translateY(-100%);
+}
+
+.message-container {
+  font-size: 1rem;
+  background-color: rgba(106, 237, 102, 0.9);
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  position: absolute;
+  transform: translateY(-100%);
+  animation: showmessage 0.4s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showmessage {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* media query */
+
+@media screen and (max-width: 501px) {
+  .canvas-container {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  #qr-input::placeholder {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .canvas-container {
+    width: 22rem;
+    height: 22rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .canvas-container {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .canvas-container h3 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .canvas-container {
+    width: 19rem;
+    height: 19rem;
+  }
+
+  #qr-input::placeholder {
+    font-size: 1.2rem;
+  }
+}
