@@ -4,6 +4,7 @@ const print = document.getElementById("print");
 const canvas = document.querySelector("canvas");
 const link = document.getElementById("link");
 const message = document.querySelector(".message");
+const note = document.querySelector(".canvas-container h3");
 
 function isCanvasBlank(canvas) {
   const context = canvas.getContext("2d");
@@ -37,6 +38,7 @@ gen.addEventListener("click", (e) => {
       if (error) showPopUp(error, false);
       showPopUp("qr code successfully generated", true);
       qrData.value = "";
+      note.textContent = "";
     });
   } else {
     showPopUp("please enter something", false);
